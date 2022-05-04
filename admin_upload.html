@@ -75,7 +75,7 @@ var raw = JSON.stringify({
     "data": "none"
 });
 
-fetch("https://0173-27-4-43-91.in.ngrok.io/category", {
+fetch("http://ijm-file-engine.us-east-1.elasticbeanstalk.com/category", {
     method: 'POST',
     body: raw,
 })
@@ -109,7 +109,7 @@ var raw = JSON.stringify({
   "data": val
 });
 
-fetch("https://0173-27-4-43-91.in.ngrok.io/category", {
+fetch("http://ijm-file-engine.us-east-1.elasticbeanstalk.com/category", {
     method: 'POST',
     body: raw,
 })
@@ -147,7 +147,7 @@ function submitform() {
             body: formdata,
             redirect: 'manual'
     };
-    fetch("https://0173-27-4-43-91.in.ngrok.io/admin_upload", requestOptions)
+    fetch("http://ijm-file-engine.us-east-1.elasticbeanstalk.com/admin_upload", requestOptions)
     .then(response => response.text())
     .then(
         function(result){
@@ -170,7 +170,7 @@ function submitform() {
                     redirect: 'manual'
             };
 
-            fetch("https://0173-27-4-43-91.in.ngrok.io/create_metadata", requestOptions)
+            fetch("http://ijm-file-engine.us-east-1.elasticbeanstalk.com/create_metadata", requestOptions)
                     .then(response => response.text())
                     .then(result => console.log(result))
                     .catch(error => console.log('error', error));

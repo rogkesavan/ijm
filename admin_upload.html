@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="p-5">
-        <form onsubmit="submitform();return false">
+        <form onsubmit="submitform(e);return false">
             <div class="admin_user_upload mt-5">
                 <div id="warning" class="row"></div>
                 <div class="row">
@@ -137,7 +137,8 @@ uploadField.onchange = function() {
     };
 };
 
-function submitform() {
+function submitform(e) {
+    e.preventDefault();
     var newFilename = document.getElementById("filename").value;
     var tags = document.getElementById("tags").value;
     var category = document.getElementById("mySelect").value;
